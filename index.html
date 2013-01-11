@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/reset.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="css/favicon.png" />
+    <link rel="apple-touch-icon" href="css/apple-touch-icon.png" />
+    <!-- Code Prettifier: -->
+<link href="css/highlight.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    <link href="css/style.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,800italic,300,400,800' rel='stylesheet' type='text/css'>    
+
+
+  </head>
+
+  <body>
+  <div class="fallback-message">
+  <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+  <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+  </div>
+    <div id="impress">
+    <div class='step' >
+    
+<h1>RESTful APIs</h1>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>What&#39;s REST?</h1>
+
+<h2>REpresentational State Transfer</h2>
+
+<p>An <strong>architectural style</strong> for <strong>distributed systems</strong> (like the web).</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<p>REST is not a standard, but <em>does</em> use standards, like...</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<ul>
+<li>HTTP</li>
+<li>URI/URL</li>
+<li>XML/HTML/GIF/JPEG/PNG (resource representations)</li>
+<li>text/xml, text/html, image/gif, image/jpeg, etc (MIME types)</li>
+</ul>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Eight Characteristics of REST APIs</h1>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Uniform Interface</h1>
+
+<p>Resources are accessed with a generic interface (e.g., HTTP verbs)</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Stateless</h1>
+
+<p>Each request must contain all of the information necessary to understand the request and can&#39;t take advantage of any server-side stored context.</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Cacheable</h1>
+
+<p>Responses have to be capable of being labeled as cacheable or non-cacheable.</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Client-Server</h1>
+
+<p>Consuming components pull representations (pull-based interaction style).</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Layered System</h1>
+
+<p>Should be able to accommodate extra layers, like proxy servers, caches, gateways, etc.</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Named Resources</h1>
+
+<p>The system has to be built such that every resource has a URL (that resource&#39;s name).</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Interconnected Representations</h1>
+
+<p>All of the resources are connected via URL</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Code on Demand (optional)</h1>
+
+<p>The server can temporarily extend the functionality of the client by sending along executable code.</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Designing an API, step-by-step</h1>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<ol>
+<li>What are the entities we want to expose as services (products list, product detail, etc.)?</li>
+</ol>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<ol>
+<li>Create a URL to each resource (<a href="http://widgetco.com/products/123">http://widgetco.com/products/123</a>)</li>
+</ol>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<ol>
+<li>Which resources can be modified? For these, use POST, PUT, and/or DELETE. For the rest, use GET.</li>
+</ol>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<ol>
+<li>All resources available via GET should be side-effect free (i.e., don&#39;t use GET to modify resources...that&#39;s a no-no!).</li>
+</ol>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<ol>
+<li>Place links within representations so users can drill down and navigate between resources.</li>
+</ol>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<ol>
+<li>Provide minimal information per response document and let the user get more details via links.</li>
+</ol>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<ol>
+<li>What will the response data&#39;s format be (JSON, XML, etc.)?</li>
+</ol>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<ol>
+<li>How will the services be accessed? WSDL? HTML document?</li>
+</ol>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<p>Ta-da! You have a REST API!</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Mapping RESTful URIs to HTTP Verbs</h1>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<p><strong><a href="http://widgetco.com/products/">http://widgetco.com/products/</a></strong> - GET a list of URIs for all products, PUT a new collection of products (replacing existing products), POST a new product, or DELETE all the products</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<p><strong><a href="http://widgetco.com/products/123">http://widgetco.com/products/123</a></strong> - GET a representation of a specific product, PUT a new product (replacing the existing one) or create one if it doesn&#39;t exist, or DELETE this product
+<strong>Notice</strong> how POST is not used that often? That&#39;s because REST favors PULL-based interactions over the traditional POST-style.</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Some Benefits of the REST Architectural Style</h1>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<p>Code <em>one</em> API. Then, build as many clients as you want (web, mobile web, phone, tablet) to consume it.</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<p>Changes to the API automatically propagate throughout the system.</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<p>Not <em>married</em> to your client - you can change any or all of them without having to touch the API.</p>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>Some implementation ideas...</h1>
+
+<ol>
+<li>Build a REST API using <a href="https://github.com/mcavage/node-restify">Restify</a></li>
+<li>Build a website-as-client using <a href="http://nodejs.org/">Node</a> and <a href="http://backbonejs.org/">Backbone</a></li>
+<li>Build a mobile app using <a href="http://phonegap.com/">PhoneGap</a></li>
+<li>Expose your API for developers</li>
+<li>Profit!</li>
+</ol>
+</div>
+      <div class='step'  data-x='1000' data-scale='2'>
+    
+<h1>References &amp; Links</h1>
+
+<ul>
+<li><a href="http://www.ics.uci.edu/%7Efielding/pubs/dissertation/top.htm">Architectural Styles and the Design of Network-based Software Architectures</a>, by Roy Fielding</li>
+<li><a href="http://www.restapitutorial.com/">REST API Tutorial</a></li>
+<li><a href="http://tomayko.com/writings/rest-to-my-wife">How I Explained REST to My Wife</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Representational_state_transfer">Wikipedia&#39;s REST Entry</a></li>
+</ul>
+
+      </div>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+  </body>
+</html>
+    
